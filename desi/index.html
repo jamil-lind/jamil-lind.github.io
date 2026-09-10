@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>德丝缇拉克-角色资料、设定解析与相关作品索引</title>
+<meta name="description" content="德丝缇拉克角色资料专题，整理其名称来源、角色定位、常见设定要素、出场作品类型、相关世界观与读者常见问题，帮助你快速了解这一名称对应的角色信息。">
+<meta name="keywords" content="德丝缇拉克,德丝缇拉克角色,德丝缇拉克设定,德丝缇拉克资料,德丝缇拉克出处">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1c1a24;
+  --ink-soft:#4a4658;
+  --paper:#f6f3ee;
+  --paper-2:#ffffff;
+  --line:#ddd6cc;
+  --accent:#7a4bd6;
+  --accent-2:#3f2b78;
+  --accent-soft:#efe8fb;
+  --gold:#b8873a;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(38,28,66,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%}
+.wrap{width:min(1160px,92%);margin:0 auto}
+
+/* ---------- 顶部 ---------- */
+.topbar{
+  background:var(--accent-2);
+  color:#e8e0ff;
+  font-size:13px;
+  padding:7px 0;
+}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar span{opacity:.85}
+
+header.site{
+  background:var(--paper-2);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.site .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:14px 0;
+  flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(140deg,var(--accent),var(--accent-2));
+  color:#fff;display:grid;place-items:center;
+  font-weight:700;font-size:19px;letter-spacing:1px;
+  box-shadow:var(--shadow);
+}
+.brand h1{
+  font-size:20px;margin:0;line-height:1.2;letter-spacing:.5px;
+}
+.brand p{margin:2px 0 0;font-size:12px;color:var(--ink-soft);letter-spacing:.5px}
+
+nav.main ul{
+  list-style:none;display:flex;gap:6px;margin:0;padding:0;flex-wrap:wrap;
+}
+nav.main a{
+  display:block;padding:8px 14px;border-radius:999px;
+  font-size:14px;color:var(--ink-soft);
+}
+nav.main a:hover{background:var(--accent-soft);color:var(--accent-2);text-decoration:none}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  background:
+    radial-gradient(900px 320px at 82% -10%,rgba(122,75,214,.28),transparent 60%),
+    linear-gradient(180deg,#241a44 0%,#3a2a6b 60%,#4b3686 100%);
+  color:#f3eeff;
+  padding:56px 0 48px;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .95fr;gap:40px;align-items:center;
+}
+.hero .tag{
+  display:inline-block;font-size:12px;letter-spacing:2px;
+  border:1px solid rgba(255,255,255,.35);
+  padding:4px 12px;border-radius:999px;margin-bottom:18px;color:#ded3ff;
+}
+.hero h2{
+  font-size:clamp(26px,3.6vw,40px);
+  line-height:1.3;margin:0 0 16px;font-weight:700;
+}
+.hero h2 em{font-style:normal;color:#ffd89b}
+.hero p.lead{
+  font-size:16px;color:#d9d0f5;margin:0 0 24px;max-width:56ch;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:999px;
+  font-size:15px;font-weight:600;border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{background:#ffd89b;color:#3a2a6b}
+.btn-primary:hover{background:#ffe6bd;text-decoration:none}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#f3eeff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);text-decoration:none}
+
+.hero-card{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius);
+  padding:22px;
+  backdrop-filter:blur(3px);
+}
+.hero-card h3{
+  margin:0 0 14px;font-size:15px;letter-spacing:1px;color:#ffd89b;font-weight:600;
+}
+.hero-card dl{margin:0;font-size:14px}
+.hero-card dt{color:#b8aee0;font-size:12.5px;letter-spacing:.5px;margin-top:12px}
+.hero-card dt:first-child{margin-top:0}
+.hero-card dd{margin:3px 0 0;color:#f3eeff}
+
+/* ---------- 通用区块 ---------- */
+section{padding:56px 0}
+section.alt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:30px;max-width:70ch}
+.sec-head .kicker{
+  font-size:12px;letter-spacing:3px;color:var(--accent);font-weight:700;
+  text-transform:uppercase;
+}
+.sec-head h2{
+  font-size:clamp(21px,2.4vw,27px);margin:8px 0 10px;line-height:1.35;
+}
+.sec-head p{margin:0;color:var(--ink-soft);font-size:15px}
+
+/* ---------- 卡片网格 ---------- */
+.grid{display:grid;gap:20px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+
+.card{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+  transition:transform .18s ease,border-color .18s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:#c9bcec}
+.card h3{font-size:17px;margin:0 0 10px}
+.card p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.card .num{
+  display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;
+  background:var(--accent-soft);color:var(--accent-2);font-weight:700;font-size:13px;
+  margin-bottom:12px;
+}
+
+/* ---------- 设定条目 ---------- */
+.defs{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;
+  border-top:1px solid var(--line);
+}
+.defs div{
+  padding:18px 0;border-bottom:1px solid var(--line);
+}
+.defs dt{font-weight:700;font-size:15px;margin-bottom:6px;color:var(--accent-2)}
+.defs dd{margin:0;font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- 作品 / 索引列表 ---------- */
+.list{list-style:none;margin:0;padding:0}
+.list li{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:16px 0;border-bottom:1px dashed var(--line);
+}
+.list li:last-child{border-bottom:none}
+.list .badge{
+  flex:0 0 auto;font-size:12px;padding:3px 10px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent-2);font-weight:600;
+  margin-top:3px;white-space:nowrap;
+}
+.list .txt strong{display:block;font-size:15px;margin-bottom:3px}
+.list .txt span{font-size:14px;color:var(--ink-soft)}
+
+/* ---------- 侧栏布局 ---------- */
+.split{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:start}
+.aside-box{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);
+}
+.aside-box h3{font-size:16px;margin:0 0 14px}
+.aside-box ul{margin:0;padding-left:18px;font-size:14.5px;color:var(--ink-soft)}
+.aside-box li{margin-bottom:9px}
+.note{
+  margin-top:18px;padding:14px 16px;border-left:3px solid var(--gold);
+  background:#fdf8ef;font-size:13.5px;color:#6b5a3a;border-radius:0 10px 10px 0;
+}
+
+/* ---------- 阅读指引步骤 ---------- */
+.steps{counter-reset:s;display:grid;gap:16px}
+.step{
+  position:relative;padding:20px 22px 20px 66px;
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+}
+.step::before{
+  counter-increment:s;content:counter(s);
+  position:absolute;left:20px;top:20px;
+  width:30px;height:30px;border-radius:50%;
+  background:linear-gradient(140deg,var(--accent),var(--accent-2));
+  color:#fff;display:grid;place-items:center;font-size:14px;font-weight:700;
+}
+.step h3{margin:0 0 6px;font-size:16px}
+.step p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- FAQ ---------- */
+.faq details{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 20px;margin-bottom:12px;
+}
+.faq summary{
+  cursor:pointer;font-weight:600;font-size:15.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";font-size:20px;color:var(--accent);flex:0 0 auto;line-height:1;
+}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:12px 0 0;font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- 页脚 ---------- */
+footer.site{
+  background:#1d1630;color:#b6aed1;padding:44px 0 26px;font-size:14px;
+}
+footer.site .cols{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:30px;
+}
+footer.site h3{color:#fff;font-size:15px;margin:0 0 12px}
+footer.site p{margin:0;color:#9d94bd;font-size:13.5px}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{margin-bottom:8px}
+footer.site a{color:#c6bce6}
+footer.site a:hover{color:#fff}
+.copy{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:18px;
+  font-size:12.5px;color:#8b82ab;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr;gap:28px}
+  footer.site .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  section{padding:40px 0}
+  .hero{padding:40px 0 36px}
+  .grid-3,.grid-4,.grid-2{grid-template-columns:1fr}
+  .defs{grid-template-columns:1fr;gap:0}
+  .site .wrap{flex-direction:column;align-items:flex-start;gap:12px}
+  nav.main ul{gap:2px}
+  nav.main a{padding:7px 11px;font-size:13.5px}
+  footer.site .cols{grid-template-columns:1fr}
+  .step{padding:18px 18px 18px 58px}
+  .step::before{left:16px;top:18px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>角色资料索引 · 设定梳理 · 出处参考</span>
+    <span>内容以公开可查信息为准，未确认内容不作断言</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">德</div>
+      <div>
+        <h1>德丝缇拉克</h1>
+        <p>角色资料与设定解析专题</p>
+      </div>
+    </div>
+    <nav class="main" aria-label="主导航">
+      <ul>
+        <li><a href="#intro">角色概览</a></li>
+        <li><a href="#setting">设定要素</a></li>
+        <li><a href="#works">出处索引</a></li>
+        <li><a href="#guide">查找方法</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero" id="intro">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">CHARACTER FILE</span>
+        <h2>德丝缇拉克：一个常被搜索、却少有系统整理的<em>角色名称</em></h2>
+        <p class="lead">
+          “德丝缇拉克”多出现在二次元作品的角色讨论中，检索者通常想知道三件事：这个名字属于哪部作品、角色在故事中处于什么位置、以及围绕它有哪些常见的设定说法。本页把可确认的信息、容易混淆的点与查找路径集中在一起，方便你按需核对。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#setting">查看设定要素</a>
+          <a class="btn btn-ghost" href="#works">前往出处索引</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="名称速览">
+        <h3>名称速览</h3>
+        <dl>
+          <dt>中文常见写法</dt>
+          <dd>德丝缇拉克</dd>
+          <dt>名称构成</dt>
+          <dd>音译型人名，常见于奇幻、冒险类作品的角色命名体系</dd>
+          <dt>典型搜索意图</dt>
+          <dd>查出处 / 查设定 / 查关系与剧情定位</dd>
+          <dt>信息可靠度提示</dt>
+          <dd>同一音译可能对应不同原文拼写，需结合作品名交叉确认</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 角色概览 -->
+  <section id="overview">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Overview</div>
+        <h2>先弄清楚：你搜的“德丝缇拉克”是哪一类角色</h2>
+        <p>音译名称最容易出现的情况，是同一个中文写法被不同圈子指向不同对象。先做分类判断，比直接找剧情细节更有效率。</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="num">1</span>
+          <h3>作品内角色</h3>
+          <p>最常见的情况：某部游戏、动画或轻小说中确实存在该角色，拥有固定的身份、阵营与剧情线。这类信息应以作品官方设定集、官方站点或正式出版物为第一优先来源。</p>
+        </article>
+        <article class="card">
+          <span class="num">2</span>
+          <h3>译名差异</h3>
+          <p>同一原文在不同译本、不同字幕组或不同平台可能被译成多个中文写法。“德丝缇拉克”有可能是其中一种译法，检索时用原文拼写或英文名反查往往更准确。</p>
+        </article>
+        <article class="card">
+          <span class="num">3</span>
+          <h3>同人延伸</h3>
+          <p>部分名称来自同人创作、二次设定或社区昵称，并未出现在原作正文中。这类内容需要与官方设定严格区分，避免把同人设定当作原作事实引用。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 设定要素 -->
+  <section class="alt" id="setting">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Settings</div>
+        <h2>角色类词条通常包含的设定维度</h2>
+        <p>下面这些维度是判断一个角色资料是否完整、是否值得参考的实用清单。你可以把它当作核对表，逐项确认自己关心的信息。</p>
+      </div>
+      <dl class="defs">
+        <div>
+          <dt>身份与阵营</dt>
+          <dd>角色在故事结构中的基本定位，例如所属势力、职业、种族或社会身份。这一项决定了后续剧情行为的合理性来源。</dd>
+        </div>
+        <div>
+          <dt>外貌与标志物</dt>
+          <dd>发色、瞳色、服装配色、随身道具等。这类特征在检索图片、辨别同人作品时最直观，也最容易被记错。</dd>
+        </div>
+        <div>
+          <dt>能力与战斗方式</dt>
+          <dd>若作品含战斗要素，需要区分“能力体系内的定位”与“实际战绩表现”，两者经常被读者混为一谈。</dd>
+        </div>
+        <div>
+          <dt>人物关系</dt>
+          <dd>与主角、同伴、对立方的关联。关系网是理解角色动机的关键，也是同人讨论最集中的部分。</dd>
+        </div>
+        <div>
+          <dt>剧情节点</dt>
+          <dd>首次登场、重要转折、结局走向。涉及剧透，建议按自己的阅读进度选择性查看。</dd>
+        </div>
+        <div>
+          <dt>名称来源</dt>
+          <dd>命名可能参考神话、外语词汇或特定文化背景。若有官方说明，可信度最高；无官方说明时不宜过度推断。</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 出处索引 -->
+  <section id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Index</div>
+        <h2>出处与信息索引：按可靠度分层查找</h2>
+        <p>与其在搜索结果里反复翻页，不如按下面的顺序逐层推进，通常能在较短时间内把信息确认清楚。</p>
+      </div>
+
+      <div class="split">
+        <div>
+          <ul class="list">
+            <li>
+              <span class="badge">第一优先</span>
+              <div class="txt">
+                <strong>作品官方资料</strong>
+                <span>官方站点、设定集、公式书、动画官网的角色介绍页。这类来源对身份、能力、关系的描述最权威，也是判断译名是否正确的基准。</span>
+              </div>
+            </li>
+            <li>
+              <span class="badge">第二优先</span>
+              <div class="txt">
+                <strong>正式出版物与授权译本</strong>
+                <span>简体或繁体授权版小说、漫画、字幕。可用来确认中文译名的规范写法，以及该译名是否被官方采用。</span>
+              </div>
+            </li>
+            <li>
+              <span class="badge">第三优先</span>
+              <div class="txt">
+                <strong>百科与资料站</strong>
+                <span>综合性百科、专题资料站适合快速建立整体印象，但需注意版本更新滞后、条目混编等问题，关键结论仍应回到官方来源核对。</span>
+              </div>
+            </li>
+            <li>
+              <span class="badge">参考用</span>
+              <div class="txt">
+                <strong>社区讨论与同人整理</strong>
+                <span>论坛、社交平台的角色讨论能反映读者关注点，也可能包含考据与译名对照，但其中推测性内容较多，引用前需标注来源性质。</span>
+              </div>
+            </li>
+            <li>
+              <span class="badge">谨慎对待</span>
+              <div class="txt">
+                <strong>内容农场与聚合页</strong>
+                <span>部分页面为拼凑生成，容易出现张冠李戴、角色串作品的情况。若某条信息只在此类页面出现，建议暂缓采信。</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="aside-box" aria-label="检索小技巧">
+          <h3>提高检索命中率的小技巧</h3>
+          <ul>
+            <li>用“中文名 + 作品名”组合搜索，比单独搜名字准确得多。</li>
+            <li>尝试英文或罗马字拼写反查，可绕过译名不统一的问题。</li>
+            <li>在搜索词中加上“设定”“角色介绍”“公式”等限定词。</li>
+            <li>同时搜索常见误写形式，例如同音或近形字，避免漏掉结果。</li>
+            <li>核对信息发布时间，老帖中的译名可能已被后续版本替换。</li>
+          </ul>
+          <div class="note">
+            说明：本页不对具体作品归属、剧情细节或角色关系作确定性断言。音译名称存在多义可能，请以你实际关注的作品官方资料为准。
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 查找方法 -->
+  <section class="alt" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">How to</div>
+        <h2>四步确认法：从模糊印象到明确结论</h2>
+        <p>如果你只是隐约记得这个名字，却说不出具体出处，可以按下面的顺序逐步收窄范围。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>先锁定作品范围</h3>
+          <p>回忆你是在哪类载体中接触到这个名字：游戏、动画、小说还是同人创作。载体类型能大幅缩小检索范围，也能帮你判断该去哪个平台找资料。</p>
+        </div>
+        <div class="step">
+          <h3>确认中文译名是否规范</h3>
+          <p>把名字拆成音节，尝试不同的字词组合进行搜索。若多个写法都能搜到结果，说明译名尚未统一，此时应以官方或授权译本为准。</p>
+        </div>
+        <div class="step">
+          <h3>用原文拼写交叉验证</h3>
+          <p>找到可能的原文拼写后，用原文反查角色条目。这一步能有效排除“同名不同人”的干扰，是最关键的验证环节。</p>
+        </div>
+        <div class="step">
+          <h3>回到官方来源定稿</h3>
+          <p>确认归属作品后，查阅该作品的官方角色介绍，核对你关心的身份、能力与关系信息，形成最终结论。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 阅读与使用建议 -->
+  <section id="tips">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Notes</div>
+        <h2>查阅角色资料时的几点提醒</h2>
+      </div>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>注意剧透边界</h3>
+          <p>角色资料页往往包含结局、身份反转等关键信息。若你尚未看完原作，建议只查看“身份与外貌”部分，暂时避开剧情节点与关系变化。</p>
+        </article>
+        <article class="card">
+          <h3>区分设定与表现</h3>
+          <p>官方设定描述的是角色“应该具备”的能力，而作品实际表现会受剧情需要影响。讨论强度或定位时，把两者分开说明会更严谨。</p>
+        </article>
+        <article class="card">
+          <h3>留意版本差异</h3>
+          <p>改编动画、重制版、外传作品可能对角色设定做调整。引用信息时注明版本，能避免不同来源之间看似矛盾的情况。</p>
+        </article>
+        <article class="card">
+          <h3>尊重二次创作边界</h3>
+          <p>同人设定、同人图与原创延伸属于创作者个人表达，可以欣赏和讨论，但不应被表述为原作内容，也不宜用于商业用途。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="alt" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">FAQ</div>
+        <h2>关于“德丝缇拉克”的常见问题</h2>
+        <p>以下回答基于音译类角色名称的一般检索规律，不针对某一具体作品作断言。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>“德丝缇拉克”是某部具体作品里的角色吗？</summary>
+          <p>从名称形态看，它属于音译型人名，常见于奇幻、冒险或角色扮演类作品的命名体系。但音译名称存在多义性，同一个中文写法可能对应不同原文，因此需要结合作品名或原文拼写才能确认具体归属。</p>
+        </details>
+        <details>
+          <summary>为什么搜出来的结果指向不同作品？</summary>
+          <p>原因通常有三类：一是译名不统一，不同译本使用了相同或相近的中文字；二是社区昵称与原作角色名重合；三是部分聚合页面把不同来源的信息混编在一起。遇到这种情况，优先核对原文拼写即可分辨。</p>
+        </details>
+        <details>
+          <summary>想了解角色设定，应该先看哪些内容？</summary>
+          <p>建议按“身份与阵营 → 外貌特征 → 人物关系 → 能力设定 → 剧情节点”的顺序查阅。前四项基本不涉及剧透，最后一项建议在看完对应章节后再看。</p>
+        </details>
+        <details>
+          <summary>同人设定可以当作官方资料引用吗？</summary>
+          <p>不建议。同人创作属于二次演绎，可能与官方设定存在明显差异。如果确实需要引用，应明确标注其同人属性，并尽量回到官方来源核实关键信息。</p>
+        </details>
+        <details>
+          <summary>如何判断一个角色资料页是否可靠？</summary>
+          <p>可参考三点：是否标注了信息来源与版本、是否区分了官方设定与推测内容、是否给出了原文名称或作品出处。三点都具备的页面，可信度通常更高。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h3>德丝缇拉克 · 角色资料专题</h3>
+        <p>本页围绕“德丝缇拉克”这一名称，整理角色类词条的常见检索路径、设定维度与信息可靠度判断方法，供读者查阅与核对时参考。</p>
+      </div>
+      <div>
+        <h3>页面导航</h3>
+        <ul>
+          <li><a href="#intro">角色概览</a></li>
+          <li><a href="#setting">设定要素</a></li>
+          <li><a href="#works">出处索引</a></li>
+          <li><a href="#guide">查找方法</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>使用说明</h3>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#tips">查阅提醒</a></li>
+          <li><a href="#overview">分类判断</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>内容以公开可查信息为基础整理，具体作品设定请以官方资料为准。</span>
+      <span>© 德丝缇拉克角色资料专题</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('nav.main a[href^="#"]');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function (e) {
+      var id = this.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  }
+
+  var details = document.querySelectorAll('.faq details');
+  for (var j = 0; j < details.length; j++) {
+    details[j].addEventListener('toggle', function () {
+      if (!this.open) return;
+      for (var k = 0; k < details.length; k++) {
+        if (details[k] !== this) details[k].open = false;
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
