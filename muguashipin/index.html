@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>木瓜视频-在线影视观看与视频内容浏览指南</title>
+<meta name="description" content="木瓜视频提供在线影视与视频内容浏览指引，涵盖热门推荐、分类频道、观看方式、常见问题与使用建议，帮助用户快速了解平台内容与使用要点。">
+<meta name="keywords" content="木瓜视频,在线视频,影视观看,视频平台,热门推荐,视频分类">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#3fae5a;
+  --green-dark:#2c8443;
+  --green-soft:#eaf7ee;
+  --ink:#1c2620;
+  --ink-2:#4a5a50;
+  --ink-3:#7d8c83;
+  --line:#e2eae5;
+  --bg:#f7faf8;
+  --card:#ffffff;
+  --radius:14px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;height:66px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:.5px}
+.brand-mark{
+  width:34px;height:34px;border-radius:10px;
+  background:linear-gradient(135deg,var(--green),#7ed492);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:17px;font-weight:800;
+}
+.brand small{display:block;font-size:11px;font-weight:400;color:var(--ink-3);letter-spacing:1px}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap}
+.main-nav a{
+  padding:8px 14px;border-radius:9px;font-size:15px;color:var(--ink-2);
+  transition:.2s;
+}
+.main-nav a:hover,.main-nav a.active{background:var(--green-soft);color:var(--green-dark)}
+.header-cta{
+  padding:9px 18px;border-radius:9px;background:var(--green);color:#fff;
+  font-size:14px;font-weight:600;white-space:nowrap;transition:.2s;
+}
+.header-cta:hover{background:var(--green-dark)}
+.menu-toggle{
+  display:none;background:none;border:1px solid var(--line);
+  border-radius:9px;padding:7px 11px;font-size:16px;color:var(--ink-2);cursor:pointer;
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(900px 340px at 88% -12%,rgba(63,174,90,.16),transparent 70%),
+    linear-gradient(180deg,#f2faf4 0%,#f7faf8 100%);
+  border-bottom:1px solid var(--line);
+  padding:56px 0 46px;
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:7px;
+  background:#fff;border:1px solid var(--line);
+  color:var(--green-dark);font-size:13px;font-weight:600;
+  padding:6px 14px;border-radius:999px;margin-bottom:18px;
+}
+.hero-tag i{width:7px;height:7px;border-radius:50%;background:var(--green);display:block}
+.hero h1{font-size:clamp(26px,4vw,40px);line-height:1.3;letter-spacing:-.5px;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--green-dark)}
+.hero p.lead{font-size:16px;color:var(--ink-2);max-width:600px;margin-bottom:26px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:11px;font-size:15px;font-weight:600;
+  transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-1px)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink-2)}
+.btn-ghost:hover{border-color:var(--green);color:var(--green-dark)}
+.hero-stats{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:20px;color:var(--ink)}
+.hero-stats div span{font-size:13px;color:var(--ink-3)}
+
+.hero-panel{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:22px;box-shadow:0 18px 40px -26px rgba(28,38,32,.35);
+}
+.hero-panel h3{font-size:15px;margin-bottom:14px;color:var(--ink-2);font-weight:600}
+.panel-list{display:flex;flex-direction:column;gap:10px}
+.panel-list li{
+  list-style:none;display:flex;align-items:center;gap:12px;
+  padding:11px 12px;border-radius:11px;background:var(--bg);
+  font-size:14px;color:var(--ink-2);transition:.2s;
+}
+.panel-list li:hover{background:var(--green-soft);color:var(--green-dark)}
+.panel-list .num{
+  width:24px;height:24px;flex:0 0 24px;border-radius:7px;
+  background:#fff;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;color:var(--green-dark);
+}
+
+/* ---------- section base ---------- */
+section{padding:52px 0}
+.section-head{margin-bottom:28px;max-width:760px}
+.section-head .kicker{
+  font-size:13px;font-weight:700;color:var(--green-dark);
+  letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;
+}
+.section-head h2{font-size:clamp(21px,2.6vw,28px);letter-spacing:-.3px;margin-bottom:10px}
+.section-head p{color:var(--ink-2);font-size:15px}
+
+/* ---------- categories ---------- */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 18px;transition:.22s;
+}
+.cat-card:hover{transform:translateY(-3px);border-color:#c9e3d2;box-shadow:0 16px 30px -22px rgba(28,38,32,.4)}
+.cat-icon{
+  width:40px;height:40px;border-radius:11px;background:var(--green-soft);
+  color:var(--green-dark);display:flex;align-items:center;justify-content:center;
+  font-size:18px;margin-bottom:13px;
+}
+.cat-card h3{font-size:16px;margin-bottom:7px}
+.cat-card p{font-size:13.5px;color:var(--ink-3);line-height:1.65}
+
+/* ---------- recommend ---------- */
+.reco-wrap{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.reco-card{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  background:var(--card);transition:.22s;display:flex;flex-direction:column;
+}
+.reco-card:hover{transform:translateY(-3px);box-shadow:0 18px 34px -24px rgba(28,38,32,.45)}
+.reco-thumb{
+  height:132px;
+  background:linear-gradient(135deg,#e9f6ed,#d3ecd9);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--green-dark);font-size:26px;font-weight:800;letter-spacing:1px;
+}
+.reco-body{padding:16px 17px 18px}
+.reco-body .meta{font-size:12px;color:var(--ink-3);margin-bottom:7px}
+.reco-body h3{font-size:16px;margin-bottom:8px}
+.reco-body p{font-size:13.5px;color:var(--ink-2);line-height:1.7}
+
+/* ---------- guide ---------- */
+.guide-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start}
+.steps{display:flex;flex-direction:column;gap:16px}
+.step{
+  display:flex;gap:16px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius);padding:18px 20px;
+}
+.step .idx{
+  flex:0 0 34px;width:34px;height:34px;border-radius:10px;
+  background:var(--green);color:#fff;font-weight:700;font-size:15px;
+  display:flex;align-items:center;justify-content:center;
+}
+.step h3{font-size:15.5px;margin-bottom:6px}
+.step p{font-size:13.8px;color:var(--ink-2)}
+
+.aside-box{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;margin-bottom:18px;
+}
+.aside-box h3{font-size:16px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.aside-box h3::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--green)}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:9px}
+.check-list li{
+  font-size:13.8px;color:var(--ink-2);padding-left:22px;position:relative;
+}
+.check-list li::before{
+  content:"✓";position:absolute;left:0;top:0;color:var(--green);
+  font-weight:700;font-size:13px;
+}
+.note{
+  background:var(--green-soft);border:1px solid #cfe9d8;border-radius:var(--radius);
+  padding:16px 18px;font-size:13.5px;color:var(--green-dark);line-height:1.75;
+}
+
+/* ---------- faq ---------- */
+.faq-wrap{background:#fff;border-top:1px solid var(--line)}
+.faq-list{max-width:880px;display:flex;flex-direction:column;gap:12px}
+.faq-item{
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--bg);overflow:hidden;
+}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:17px 20px;font-size:15.5px;font-weight:600;color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+  font-family:inherit;
+}
+.faq-q span.sign{
+  flex:0 0 22px;width:22px;height:22px;border-radius:6px;
+  background:#fff;border:1px solid var(--line);color:var(--green-dark);
+  display:flex;align-items:center;justify-content:center;font-size:14px;transition:.2s;
+}
+.faq-item.open .faq-q span.sign{background:var(--green);color:#fff;border-color:var(--green);transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .3s ease;
+}
+.faq-a p{padding:0 20px 18px;font-size:14px;color:var(--ink-2);line-height:1.8}
+
+/* ---------- footer ---------- */
+.site-footer{
+  background:#16211a;color:#b9c8bf;padding:44px 0 26px;font-size:14px;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:32px}
+.site-footer h4{color:#fff;font-size:15px;margin-bottom:14px}
+.site-footer p{font-size:13.5px;line-height:1.8;color:#93a59a}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-size:13.5px;color:#93a59a;transition:.2s}
+.footer-links a:hover{color:#8fe0a6}
+.footer-bottom{
+  border-top:1px solid #27352c;padding-top:20px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12.5px;color:#7c8d82;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .reco-grid{grid-template-columns:repeat(2,1fr)}
+  .guide-grid{grid-template-columns:1fr;gap:26px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .main-nav{
+    display:none;position:absolute;top:66px;left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--line);
+    flex-direction:column;padding:10px 16px 16px;gap:2px;
+  }
+  .main-nav.show{display:flex}
+  .main-nav a{padding:11px 12px}
+  .menu-toggle{display:block}
+  .header-cta{display:none}
+  .hero{padding:38px 0 34px}
+  section{padding:40px 0}
+  .hero-stats{gap:22px}
+}
+@media (max-width:520px){
+  .cat-grid{grid-template-columns:1fr}
+  .reco-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .step{flex-direction:column;gap:10px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">木</span>
+      <span>木瓜视频<small>MU GUA VIDEO</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#top" class="active">首页</a>
+      <a href="#category">内容分类</a>
+      <a href="#recommend">热门推荐</a>
+      <a href="#guide">观看指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="header-cta" href="#recommend">浏览推荐</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="展开导航">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag"><i></i>在线影视 · 视频内容浏览</span>
+        <h1>木瓜视频：<em>轻松找到想看的视频内容</em></h1>
+        <p class="lead">
+          木瓜视频是一个以在线视频浏览为核心的平台名称。对于第一次接触它的用户来说，最关心的问题通常是：这里有哪些类型的内容、如何快速找到想看的视频、观看时需要注意什么。本页围绕这些实际问题，梳理内容分类、浏览方式与使用建议，帮助你更高效地了解和使用。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#category">查看内容分类</a>
+          <a class="btn btn-ghost" href="#guide">了解观看方式</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>多类型</strong><span>影视 / 短片 / 综合</span></div>
+          <div><strong>多终端</strong><span>手机 / 电脑 / 平板</span></div>
+          <div><strong>易检索</strong><span>分类 + 关键词查找</span></div>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h3>新用户先看这几件事</h3>
+        <ul class="panel-list">
+          <li><span class="num">1</span>明确自己想看的类型，再进入对应分类</li>
+          <li><span class="num">2</span>使用关键词搜索比逐页翻找更高效</li>
+          <li><span class="num">3</span>关注清晰度与网络环境的匹配</li>
+          <li><span class="num">4</span>注意来源合规与个人隐私保护</li>
+          <li><span class="num">5</span>遇到播放问题先排查网络与浏览器</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="category">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Content Categories</div>
+        <h2>木瓜视频常见内容分类</h2>
+        <p>不同平台的栏目划分各有差异，但整体上，视频类站点通常围绕内容类型、时长形式和更新节奏来组织。了解分类逻辑，能让你更快定位到想看的内容。</p>
+      </div>
+
+      <div class="cat-grid">
+        <article class="cat-card">
+          <div class="cat-icon">🎬</div>
+          <h3>影视剧集</h3>
+          <p>以连续剧、电影、纪录片为主的较长内容，通常按题材、地区、年份进行二次划分，适合有明确观看目标的用户。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">⚡</div>
+          <h3>短视频内容</h3>
+          <p>时长较短、节奏较快的内容形式，浏览门槛低，适合碎片时间观看，通常以推荐流的方式呈现。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🎵</div>
+          <h3>音乐与娱乐</h3>
+          <p>包括音乐现场、综艺片段、娱乐资讯等，内容更新频率较高，适合关注当下热点的用户。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">📚</div>
+          <h3>知识科普</h3>
+          <p>讲解类、教程类、生活技巧类内容，观看目的偏向获取信息，通常需要更清晰的画质与字幕支持。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🧭</div>
+          <h3>按地区划分</h3>
+          <p>不少平台会按内容来源地区设置栏目，方便用户根据语言习惯和题材偏好进行筛选。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🔥</div>
+          <h3>热播榜单</h3>
+          <p>依据近期播放与讨论热度排序，适合没有明确目标、想快速找到可看内容的用户。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">🆕</div>
+          <h3>最新更新</h3>
+          <p>按更新时间排列，适合追更用户。关注更新节奏有助于减少反复刷新页面的时间。</p>
+        </article>
+        <article class="cat-card">
+          <div class="cat-icon">⭐</div>
+          <h3>收藏与历史</h3>
+          <p>多数平台提供收藏、观看记录功能，合理使用可以减少重复查找，提升连续观看体验。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 推荐 -->
+  <section id="recommend" class="reco-wrap">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Recommendations</div>
+        <h2>浏览方向与内容选择建议</h2>
+        <p>以下并非具体作品清单，而是按观看目的划分的选择思路。面对内容量较大的平台，先确定目的，再挑选内容，通常比盲目翻页更省时间。</p>
+      </div>
+
+      <div class="reco-grid">
+        <article class="reco-card">
+          <div class="reco-thumb">放松</div>
+          <div class="reco-body">
+            <div class="meta">适合：下班后 / 睡前</div>
+            <h3>以轻松内容为主</h3>
+            <p>优先选择单集时长短、剧情压力小的内容，例如轻喜剧、生活记录、音乐类视频。这类内容对注意力的要求较低，随时暂停也不影响体验。</p>
+          </div>
+        </article>
+        <article class="reco-card">
+          <div class="reco-thumb">沉浸</div>
+          <div class="reco-body">
+            <div class="meta">适合：周末 / 完整时间</div>
+            <h3>选择长内容连续观看</h3>
+            <p>电影、纪录片、剧集更适合安排整块时间观看。建议提前确认总时长与集数，避免中途被打断影响观感。</p>
+          </div>
+        </article>
+        <article class="reco-card">
+          <div class="reco-thumb">获取</div>
+          <div class="reco-body">
+            <div class="meta">适合：学习 / 解决问题</div>
+            <h3>带着问题去找内容</h3>
+            <p>知识类、教程类内容建议直接用关键词搜索，而不是依赖推荐流。明确问题后再筛选，能显著提高信息获取效率。</p>
+          </div>
+        </article>
+        <article class="reco-card">
+          <div class="reco-thumb">热点</div>
+          <div class="reco-body">
+            <div class="meta">适合：了解近期动态</div>
+            <h3>关注榜单与更新页</h3>
+            <p>热播榜和最新更新页反映的是近期的内容热度与上新节奏，适合想快速了解当前流行方向的用户。</p>
+          </div>
+        </article>
+        <article class="reco-card">
+          <div class="reco-thumb">陪伴</div>
+          <div class="reco-body">
+            <div class="meta">适合：通勤 / 做家务</div>
+            <h3>以音频信息为主的内容</h3>
+            <p>访谈、播客类视频即使不看画面也能获取主要信息，适合无法长时间盯着屏幕的场景。</p>
+          </div>
+        </article>
+        <article class="reco-card">
+          <div class="reco-thumb">探索</div>
+          <div class="reco-body">
+            <div class="meta">适合：无明确目标</div>
+            <h3>按分类随机浏览</h3>
+            <p>如果完全没有想看的类型，可以按分类逐个浏览，或从冷门栏目入手，往往比反复刷新首页更容易发现新内容。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观看指南 -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Viewing Guide</div>
+        <h2>木瓜视频使用与观看指南</h2>
+        <p>视频平台的体验受网络、设备、浏览器等多方面影响。下面从实际操作角度，说明从查找内容到顺利播放的完整流程与注意事项。</p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="steps">
+          <div class="step">
+            <div class="idx">1</div>
+            <div>
+              <h3>确定观看目标</h3>
+              <p>先想清楚是放松、追剧还是查资料。目标不同，选择内容的路径也不同：放松看推荐流，追剧看更新页，查资料用搜索。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="idx">2</div>
+            <div>
+              <h3>使用分类或搜索定位</h3>
+              <p>分类适合范围较宽的需求，搜索适合有明确关键词的情况。搜索时使用更具体的词，通常比宽泛词更容易得到相关结果。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="idx">3</div>
+            <div>
+              <h3>确认内容信息</h3>
+              <p>播放前留意标题、简介、时长和更新状态，判断是否符合预期，避免点开后才发现不是想看的内容。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="idx">4</div>
+            <div>
+              <h3>选择合适的清晰度</h3>
+              <p>清晰度越高对带宽要求越高。网络不稳定时，适当降低清晰度可以减少卡顿，观看体验反而更连贯。</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="idx">5</div>
+            <div>
+              <h3>排查播放异常</h3>
+              <p>遇到无法播放时，可依次检查网络连接、刷新页面、更换浏览器或清理缓存。多数播放问题与本地环境有关。</p>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="aside-box">
+            <h3>提升观看体验的要点</h3>
+            <ul class="check-list">
+              <li>使用较新版本的浏览器，兼容性更好</li>
+              <li>观看前关闭占用带宽的后台下载任务</li>
+              <li>手机端注意电量和流量消耗</li>
+              <li>长时间观看时适当休息，保护视力</li>
+              <li>优先在稳定网络环境下观看高清内容</li>
+            </ul>
+          </div>
+          <div class="aside-box">
+            <h3>安全与合规提示</h3>
+            <ul class="check-list">
+              <li>注意内容来源是否正规、合法</li>
+              <li>不随意在陌生页面填写个人信息</li>
+              <li>警惕要求下载不明程序的提示</li>
+              <li>对夸张诱导性标题保持判断力</li>
+            </ul>
+          </div>
+          <div class="note">
+            视频平台的内容与功能会随运营情况调整，具体栏目、播放方式与可用功能，请以实际访问时页面显示为准。
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-wrap">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">FAQ</div>
+        <h2>关于木瓜视频的常见问题</h2>
+        <p>以下问题来自用户在使用视频类平台时较常遇到的情况，回答以通用经验为主，供参考。</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">木瓜视频主要提供什么类型的内容？<span class="sign">+</span></button>
+          <div class="faq-a"><p>从名称和常见定位来看，木瓜视频属于在线视频浏览类平台，内容通常涵盖影视剧集、短视频、娱乐、知识科普等多种类型。具体有哪些栏目和内容，会随平台运营情况变化，建议以实际页面显示的分类为准。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">为什么视频加载很慢或者播放卡顿？<span class="sign">+</span></button>
+          <div class="faq-a"><p>常见原因包括网络带宽不足、同时有其他程序占用网络、清晰度设置过高、浏览器缓存过多等。可以先降低清晰度、关闭后台下载任务，再尝试刷新页面或更换浏览器。如果多个视频都出现同样问题，多半与本地网络环境有关。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">怎样更快找到自己想看的内容？<span class="sign">+</span></button>
+          <div class="faq-a"><p>如果目标明确，直接使用搜索功能并输入具体关键词效率最高；如果只是随便看看，可以从热播榜、最新更新或感兴趣的分类栏目入手。此外，善用收藏和观看记录功能，能减少重复查找的时间。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">手机上观看需要注意什么？<span class="sign">+</span></button>
+          <div class="faq-a"><p>手机端观看主要注意三点：一是流量消耗，高清视频对流量占用较大，建议在 Wi-Fi 环境下观看；二是电量，长时间播放会加快耗电；三是观看姿势与时长，保持适当距离并定时休息，有助于减轻眼睛疲劳。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">使用视频平台时如何保护个人信息？<span class="sign">+</span></button>
+          <div class="faq-a"><p>建议不在来源不明的页面填写手机号、身份证号等敏感信息，不随意下载页面提示的可疑程序，对要求提供账号密码的弹窗保持警惕。如果页面出现异常跳转或强制下载提示，应及时关闭页面。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">观看记录和收藏会一直保留吗？<span class="sign">+</span></button>
+          <div class="faq-a"><p>这取决于平台的具体机制。部分平台在未登录状态下仅保存在本地浏览器，清理缓存后可能丢失；登录账号后通常与账号关联。如果需要长期保留，建议使用账号登录并留意平台的隐私与数据说明。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>木瓜视频</h4>
+        <p>本页面为围绕“木瓜视频”这一关键词整理的内容说明页，用于介绍在线视频浏览的常见分类、使用方式与注意事项，帮助用户建立基本认知。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul class="footer-links">
+          <li><a href="#category">内容分类</a></li>
+          <li><a href="#recommend">浏览建议</a></li>
+          <li><a href="#guide">观看指南</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用参考</h4>
+        <ul class="footer-links">
+          <li><a href="#guide">播放问题排查</a></li>
+          <li><a href="#guide">清晰度选择</a></li>
+          <li><a href="#guide">安全与合规提示</a></li>
+          <li><a href="#faq">账号与记录</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <ul class="footer-links">
+          <li><a href="#top">返回顶部</a></li>
+          <li><a href="#faq">内容以实际为准</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>本页内容为通用信息整理，不构成对任何具体平台功能的承诺。</span>
+      <span>请遵守相关法律法规，合理安排观看时间。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      nav.classList.toggle('show');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ nav.classList.remove('show'); }
+    });
+  }
+
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    var ans = item.querySelector('.faq-a');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(other){
+        other.classList.remove('open');
+        var a = other.querySelector('.faq-a');
+        if(a){ a.style.maxHeight = null; }
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
